@@ -3,7 +3,31 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import java.io.FileWriter; // Criação de arquivos TXT
+import java.io.IOException; // Tratamento de Erros
+
 public class Cadastro {
+
+    public static void SalvarArquivo(ArrayList<Funcionario> lista) {
+        try {
+
+            FileWriter arquivo = new FileWriter("funcionarios.txt"); // Criação Arquivo TXT
+
+            for (Funcionario funcionario : lista) {
+                arquivo.write("Nome: " + funcionario.nome + "\n");
+                arquivo.write("Cargo: " + funcionario.cargo + "\n");
+                arquivo.write("Matrícula: " + funcionario.matricula + "\n");
+                arquivo.write(String.format("Salário: R$ %.2f\n", funcionario.salario));
+                arquivo.write("-----------------------------------------\n");
+            }
+
+            arquivo.close();
+            System.out.println("\nFuncionários Salvos com sucesso");
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar os dados: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
 
         // Instanciação do Scanner e criação da lista de funcionários
