@@ -46,7 +46,7 @@ public class Cadastro {
 
             br.close();
             fr.close();
-            
+
         } catch (IOException e) {
             System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
@@ -68,7 +68,7 @@ public class Cadastro {
         do {
 
             System.out.print(
-                    "\nDigite\n \n1 para Cadastro;\n2 para Exibição;\n3 para busca por matrícula;\n4 para verificação salarial;\n5 para desligamento;\n6 para atualização;\n7 para salvar dados em arquivo TXT;\n8 para sair\n  \n-> ");
+                    "\nDigite\n \n1 para Cadastro;\n2 para Exibição;\n3 para busca por matrícula;\n4 para verificação salarial;\n5 para desligamento;\n6 para atualização;\n7 para salvar dados em arquivo TXT;\n8 para leitura;\n9 para sair:\n  \n-> ");
             menu = entrada.nextInt();
 
             switch (menu) {
@@ -215,6 +215,10 @@ public class Cadastro {
 
                 case 7:
                     SalvarArquivo(listaFuncionarios);
+                    break;
+
+                case 8:
+                    LerArquivo();
                     break;
 
                 default:
