@@ -13,3 +13,53 @@ Cargo: Dev. Junior
 Matrícula: 4
 Salário: R$ 17500,00
 -----------------------------------------
+Nome: Mariana Souza
+Cargo: Product Manager
+Matrícula: 5
+Salário: R$ 28500,00
+-----------------------------------------
+Nome: Fernando Almeida
+Cargo: Arquiteto de Software
+Matrícula: 6
+Salário: R$ 32200,00
+-----------------------------------------
+Nome: Beatriz Lima
+Cargo: UX/UI Designer
+Matrícula: 7
+Salário: R$ 18700,00
+-----------------------------------------
+Nome: Carlos Mendes
+Cargo: Dev. Pleno
+Matrícula: 8
+Salário: R$ 21500,00
+-----------------------------------------
+Nome: Juliana Costa
+Cargo: Scrum Master
+Matrícula: 9
+Salário: R$ 27600,00
+-----------------------------------------
+Nome: Rafael Oliveira
+Cargo: Tech Writer
+Matrícula: 10
+Salário: R$ 16200,00
+-----------------------------------------
+Nome: Eduardo Pereira
+Cargo: Analista de Dados
+Matrícula: 11
+Salário: R$ 24000,00
+-----------------------------------------
+Nome: Amanda Torres
+Cargo: QA Engineer
+Matrícula: 12
+Salário: R$ 19800,00
+-----------------------------------------
+Nome: Gustavo Martins
+Cargo: Eng. Analitico
+Matrícula: 13
+Salário: R$ 32500,00
+-----------------------------------------
+Nome: Camila Fernandes
+Cargo: Cientista de Dados
+Matrícula: 14
+Salário: R$ 32500,00
+-----------------------------------------

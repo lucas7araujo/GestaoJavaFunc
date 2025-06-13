@@ -1,18 +1,52 @@
-## Getting Started
+# 📁 Sistema de Cadastro de Funcionários em Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um sistema simples de cadastro de funcionários desenvolvido com **Programação Orientada a Objetos (POO)** em **Java**. O projeto utiliza apenas bibliotecas padrão da linguagem e permite salvar e carregar dados de um arquivo `.txt`.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 💡 Sobre o Projeto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O sistema permite:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+✅ Cadastrar funcionários  
+✅ Exibir todos os funcionários  
+✅ Buscar por matrícula  
+✅ Calcular a média salarial  
+✅ Mostrar funcionários com salário acima da média  
+✅ Remover funcionários  
+✅ Atualizar dados dos funcionários  
+✅ Salvar os dados em um arquivo `.txt`  
+✅ Ler os dados salvos e recarregar no sistema  
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 📚 Bibliotecas Utilizadas
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Todas as bibliotecas usadas são padrão do Java:
+
+- `Scanner` → Entrada de dados via teclado  
+- `ArrayList` → Armazenamento dinâmico de objetos  
+- `FileWriter` & `FileReader` → Gravar e ler arquivos  
+- `BufferedReader` → Ler arquivos linha por linha  
+- `IOException` → Tratamento de exceções  
+
+---
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/lucas7araujo/GestaoJavaFunc.git
+2. Navegue até o diretório do projeto
+    ```bash
+    cd Estudo3/Estudo2POO/src
+3. Compile o código java
+    ```bash
+    javac Cadastro.java
+4. Execute o código java
+    ```bash
+    java Cadastro
+---
+
+
+
