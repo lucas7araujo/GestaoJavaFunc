@@ -3,3 +3,13 @@ Cargo: TechLead
 Matrícula: 1
 Salário: R$ 35680,00
 -----------------------------------------
+Nome: Gabriel Barbosa
+Cargo: Eng. Software
+Matrícula: 2
+Salário: R$ 19500,00
+-----------------------------------------
+Nome: Pedro
+Cargo: Dev. Junior
+Matrícula: 4
+Salário: R$ 17500,00
+-----------------------------------------

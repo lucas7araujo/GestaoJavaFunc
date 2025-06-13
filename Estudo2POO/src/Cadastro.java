@@ -31,27 +31,6 @@ public class Cadastro {
         }
     }
 
-    // public static void LerArquivo() {
-    // try {
-    // FileReader fr = new FileReader("funcionarios.txt");
-
-    // BufferedReader br = new BufferedReader(fr);
-
-    // String linha;
-    // System.out.println(("\nConteúdo do arquivo: \n"));
-
-    // while ((linha = br.readLine()) != null) {
-    // System.out.println(linha);
-    // }
-
-    // br.close();
-    // fr.close();
-
-    // } catch (IOException e) {
-    // System.out.println("Erro ao ler o arquivo: " + e.getMessage());
-    // }
-    // }
-
     public static ArrayList<Funcionario> LerArquivo() {
         ArrayList<Funcionario> lista = new ArrayList<>(); // Criação de uma nova lista
         try {
@@ -73,7 +52,7 @@ public class Cadastro {
                 } else if (linha.startsWith("Matrícula: ")) {
                     matricula = Integer.parseInt(linha.replace("Matrícula: ", ""));
                 } else if (linha.startsWith("Salário: R$ ")) {
-                    salario = Double.parseDouble(linha.replace("Salário: R$ ", ""));
+                    salario = Double.parseDouble(linha.replace("Salário: R$ ", "").replace(",", "."));
                 } else if (linha.startsWith("---")) {
                     Funcionario funcionario = new Funcionario(nome, cargo, matricula, salario);
                     lista.add(funcionario);
