@@ -1,10 +1,14 @@
 // Importação de Bibliotecas
 
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Scanner; // Lê entradas
+import java.util.ArrayList; // Cria listas dinâmicas
 
 import java.io.FileWriter; // Criação de arquivos TXT
 import java.io.IOException; // Tratamento de Erros
+
+import java.io.FileReader; // Lê arquivos.txt carregados
+import java.io.BufferedReader; // Lê o conteúdo do arquivo linha por linha
+
 
 public class Cadastro {
 

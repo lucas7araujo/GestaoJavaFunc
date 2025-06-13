@@ -1,0 +1,10 @@
+Nome: Lucas Gabriel
+Cargo: Tech Lead
+Matrícula: 1
+Salário: R$ 29650,00
+-----------------------------------------
+Nome: Gabriel Lucas
+Cargo: Dev. Senior (Java)
+Matrícula: 2
+Salário: R$ 19850,00
+-----------------------------------------
