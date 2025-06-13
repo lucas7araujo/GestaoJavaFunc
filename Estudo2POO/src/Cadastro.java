@@ -87,7 +87,7 @@ public class Cadastro {
         do {
 
             System.out.print(
-                    "\nDigite\n \n1 para Cadastro;\n2 para Exibição;\n3 para busca por matrícula;\n4 para verificação salarial;\n5 para desligamento;\n6 para atualização;\n7 para salvar dados em arquivo TXT;\n8 para leitura;\n9 para sair:\n  \n-> ");
+                    "\nDigite\n \n1 para Cadastro;\n2 para Exibição;\n3 para busca por matrícula;\n4 para verificação salarial;\n5 para desligamento;\n6 para atualização;\n7 para salvar dados em arquivo TXT;\n8 para sair;\n  \n-> ");
             menu = entrada.nextInt();
 
             switch (menu) {
@@ -236,15 +236,11 @@ public class Cadastro {
                     SalvarArquivo(listaFuncionarios);
                     break;
 
-                case 8:
-                    LerArquivo();
-                    break;
-
                 default:
                     break;
             }
 
-        } while (menu != 9);
+        } while (menu != 8);
 
         entrada.close();
 
