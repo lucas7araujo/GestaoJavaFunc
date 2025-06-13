@@ -189,6 +189,10 @@ public class Cadastro {
                         System.out.println("\nFuncionário Não Encontrado!");
                     break;
 
+                case 7:
+                    SalvarArquivo(listaFuncionarios);
+                    break;
+
                 default:
                     break;
             }
