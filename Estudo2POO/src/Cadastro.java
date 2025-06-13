@@ -9,7 +9,6 @@ import java.io.IOException; // Tratamento de Erros
 import java.io.FileReader; // Lê arquivos.txt carregados
 import java.io.BufferedReader; // Lê o conteúdo do arquivo linha por linha
 
-
 public class Cadastro {
 
     public static void SalvarArquivo(ArrayList<Funcionario> lista) {
@@ -29,6 +28,27 @@ public class Cadastro {
             System.out.println("\nFuncionários Salvos com sucesso");
         } catch (IOException e) {
             System.out.println("Erro ao salvar os dados: " + e.getMessage());
+        }
+    }
+
+    public static void LerArquivo() {
+        try {
+            FileReader fr = new FileReader("funcionarios.txt");
+
+            BufferedReader br = new BufferedReader(fr);
+
+            String linha;
+            System.out.println(("\nConteúdo do arquivo: \n"));
+
+            while ((linha = br.readLine()) != null) {
+                System.out.println(linha);
+            }
+
+            br.close();
+            fr.close();
+            
+        } catch (IOException e) {
+            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
     }
 
