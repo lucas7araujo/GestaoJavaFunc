@@ -31,25 +31,60 @@ public class Cadastro {
         }
     }
 
-    public static void LerArquivo() {
+    // public static void LerArquivo() {
+    // try {
+    // FileReader fr = new FileReader("funcionarios.txt");
+
+    // BufferedReader br = new BufferedReader(fr);
+
+    // String linha;
+    // System.out.println(("\nConteúdo do arquivo: \n"));
+
+    // while ((linha = br.readLine()) != null) {
+    // System.out.println(linha);
+    // }
+
+    // br.close();
+    // fr.close();
+
+    // } catch (IOException e) {
+    // System.out.println("Erro ao ler o arquivo: " + e.getMessage());
+    // }
+    // }
+
+    public static ArrayList<Funcionario> LerArquivo() {
+        ArrayList<Funcionario> lista = new ArrayList<>(); // Criação de uma nova lista
         try {
-            FileReader fr = new FileReader("funcionarios.txt");
+            BufferedReader br = new BufferedReader(new FileReader("funcionarios.txt")); // Leitura do arquivo
+            String linha; // Variável auxiliar para leitura
 
-            BufferedReader br = new BufferedReader(fr);
+            // Iniciação das variáveis vazias
+            String nome = "", cargo = "";
+            int matricula = 0;
+            double salario = 0;
 
-            String linha;
-            System.out.println(("\nConteúdo do arquivo: \n"));
+            // Loop para leitura e preenchimento
 
             while ((linha = br.readLine()) != null) {
-                System.out.println(linha);
+                if (linha.startsWith("Nome: ")) {
+                    nome = linha.replace("Nome: ", "");
+                } else if (linha.startsWith("Cargo: ")) {
+                    cargo = linha.replace("Cargo: ", "");
+                } else if (linha.startsWith("Matrícula: ")) {
+                    matricula = Integer.parseInt(linha.replace("Matrícula: ", ""));
+                } else if (linha.startsWith("Salário: R$ ")) {
+                    salario = Double.parseDouble(linha.replace("Salário: R$ ", ""));
+                } else if (linha.startsWith("---")) {
+                    Funcionario funcionario = new Funcionario(nome, cargo, matricula, salario);
+                    lista.add(funcionario);
+                }
             }
 
             br.close();
-            fr.close();
-
         } catch (IOException e) {
             System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
+        return lista;
     }
 
     public static void main(String[] args) {
@@ -57,9 +92,14 @@ public class Cadastro {
         // Instanciação do Scanner e criação da lista de funcionários
 
         Scanner entrada = new Scanner(System.in);
-        ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
+        ArrayList<Funcionario> listaFuncionarios = LerArquivo();
 
-        int cont = 1; // Contador Matrícula
+        int cont = 1;
+        for (Funcionario f : listaFuncionarios) {
+            if (f.matricula >= cont) {
+                cont = f.matricula + 1;
+            }
+        } // Matrícula automática
 
         // Iniciação do switch
 
@@ -225,7 +265,7 @@ public class Cadastro {
                     break;
             }
 
-        } while (menu != 8);
+        } while (menu != 9);
 
         entrada.close();
 
